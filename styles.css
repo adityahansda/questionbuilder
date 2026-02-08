@@ -1,0 +1,181 @@
+:root {
+  color-scheme: light;
+  font-family: "Times New Roman", serif;
+  background: #f4f4f4;
+  color: #111;
+}
+
+body {
+  margin: 0;
+  padding: 32px 24px 64px;
+  background: #e6e6e6;
+}
+
+.page {
+  max-width: 1100px;
+  margin: 0 auto;
+  background: #fdfdfd;
+  padding: 24px 32px 40px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+}
+
+.exam-header {
+  border-bottom: 2px solid #222;
+  padding-bottom: 16px;
+}
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+}
+
+.exam-header h1 {
+  margin: 6px 0 2px;
+  text-align: center;
+  font-size: 24px;
+}
+
+.subtitle {
+  text-align: center;
+  margin: 0 0 12px;
+  font-size: 16px;
+}
+
+.meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  margin-top: 6px;
+}
+
+.instructions {
+  text-align: center;
+  font-style: italic;
+  border-bottom: 2px solid #222;
+  padding: 12px 0;
+  margin-bottom: 24px;
+}
+
+.builder {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+}
+
+.panel {
+  background: #fff;
+  border: 1px solid #ddd;
+  padding: 16px;
+}
+
+.panel h2 {
+  margin-top: 0;
+}
+
+label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 16px;
+}
+
+textarea {
+  width: 100%;
+  margin-top: 8px;
+  padding: 8px;
+  font-family: "Courier New", monospace;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.upload {
+  border: 1px dashed #888;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.upload input {
+  display: block;
+  margin-top: 6px;
+}
+
+.file-name {
+  display: block;
+  font-size: 12px;
+  margin-top: 4px;
+  color: #444;
+}
+
+.ai-panel {
+  border: 1px solid #ccc;
+  padding: 10px;
+  background: #fafafa;
+  margin-bottom: 16px;
+}
+
+.ai-panel input[type="password"] {
+  width: 100%;
+  padding: 6px;
+  margin: 8px 0;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.toggle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+}
+
+.actions {
+  display: flex;
+  gap: 12px;
+}
+
+button {
+  padding: 8px 14px;
+  border: none;
+  background: #2c4b88;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #243d6e;
+}
+
+.paper {
+  border: 1px solid #111;
+  padding: 12px;
+  min-height: 360px;
+  background: #fffdf8;
+}
+
+.paper h3 {
+  text-align: center;
+  margin-top: 0;
+}
+
+.paper .section {
+  margin-top: 16px;
+}
+
+.paper .question {
+  margin: 6px 0;
+}
+
+.placeholder {
+  color: #666;
+  font-style: italic;
+}
+
+.summary {
+  margin-top: 16px;
+  padding: 12px;
+  background: #f8f8f8;
+  border: 1px dashed #ccc;
+  font-size: 13px;
+}

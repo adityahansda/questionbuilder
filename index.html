@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Question Paper Builder</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page">
+      <header class="exam-header">
+        <div class="header-top">
+          <p class="exam-code">501</p>
+          <p class="department">CYBER SECURITY</p>
+        </div>
+        <h1>Jharkhand University of Technology, Ranchi</h1>
+        <p class="subtitle">B.Tech. 5th Semester Examination, 2025 (NEP)</p>
+        <div class="meta">
+          <span>Subject : PCC-I-Network Security &amp; Cryptography</span>
+          <span>Subject Code : CYSC 501</span>
+        </div>
+        <div class="meta">
+          <span>Time Allowed : 3 Hours</span>
+          <span>Full Marks : 70</span>
+        </div>
+      </header>
+
+      <section class="instructions">
+        <p>Answer in your own words.</p>
+        <p>Answer any five questions in which Question No. 1 is compulsory.</p>
+        <p>The figures in the margin indicate full marks.</p>
+        <p>All questions carry equal marks.</p>
+      </section>
+
+      <section class="builder">
+        <div class="panel">
+          <h2>Input sources</h2>
+          <label class="upload">
+            Upload question paper (image/PDF)
+            <input type="file" id="paperUpload" accept="image/*,application/pdf" />
+            <span class="file-name" id="paperFile">No file selected</span>
+          </label>
+          <label class="upload">
+            Upload blueprint/marks structure
+            <input type="file" id="blueprintUpload" accept="image/*,application/pdf,.txt" />
+            <span class="file-name" id="blueprintFile">No file selected</span>
+          </label>
+
+          <label>
+            Syllabus (paste the unit-wise syllabus)
+            <textarea id="syllabusInput" rows="8">
+Unit-I Introduction to Security Concepts (9 Hours) The need for security, Security approaches, Principles of security, Types of Security attacks, Security services, Security Mechanisms, A model for Network Security, substitution techniques, transposition techniques, steganography.
+Unit-II Symmetric Key Cryptography (9 Hours) Algebraic structures, Divisibility and division algorithm, Euclidean algorithm, Modular arithmetic, Prime numbers, Fermat’s and Euler’s theorem, Congruence and matrices, Block Ciphers and operations, Simplified Data Encryption Standard, Data Encryption Standard, Advanced Encryption Standard.
+Unit-III Asymmetric Key Cryptography (9 Hours) Groups, Rings, Fields, Finite fields, Principles of public key cryptosystems, RSA algorithm, Elgamal Cryptography, Diffie-Hellman Key Exchange, Elliptic Curve Cryptography.
+Unit-IV Message Authentication Algorithms and Hash Functions (9 Hours) Message Authentication, Secure Hash Algorithm (SHA-3), Authentication requirements, HMAC, CMAC, Digital signatures, Elgamal Digital Signature Scheme, Kerberos, X.509 Authentication Service, Public–Key Infrastructure.
+Unit-V Security in Networks (9 Hours) Web security considerations, Secure Socket Layer and Transport Layer Security, Secure electronic transaction, Email security (PGP, S/MIME), Intruders, Intrusion detection, password management, virus and related threats, Countermeasures, Firewall design principles, types of firewalls, Case Studies on Cryptography and security: Secure Inter-branch Payment Transactions, Cross site Scripting Vulnerability, Virtual Elections.
+            </textarea>
+          </label>
+
+          <label>
+            Blueprint / marks structure (edit if needed)
+            <textarea id="blueprintInput" rows="6">
+Section 1: MCQ | 7 questions | 2 marks each
+Section 2-6: Long answers | 2 parts (a/b) | 7+7 marks each
+Section 7: Short notes | choose 4 | 3.5 marks each
+            </textarea>
+          </label>
+
+          <label>
+            Unit-wise important questions (paste or generate)
+            <textarea id="importantInput" rows="6" placeholder="Unit-I: ..."></textarea>
+          </label>
+
+          <div class="ai-panel">
+            <h3>Google AI Studio (Gemini) integration (optional)</h3>
+            <p>Provide your API key to auto-generate questions. The key is used only in your browser.</p>
+            <input type="password" id="apiKey" placeholder="Paste Google AI Studio API key" />
+            <label class="toggle">
+              <input type="checkbox" id="useAi" />
+              Use Gemini to draft questions
+            </label>
+          </div>
+
+          <div class="actions">
+            <button id="analyzeBtn">Analyze syllabus</button>
+            <button id="generateBtn">Generate question paper</button>
+          </div>
+        </div>
+
+        <div class="panel">
+          <h2>Generated question paper</h2>
+          <div class="paper" id="paperOutput">
+            <p class="placeholder">Run analysis to see the unit-wise focus and draft questions.</p>
+          </div>
+          <div class="summary" id="analysisOutput"></div>
+        </div>
+      </section>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
